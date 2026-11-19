@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tradutor de Alto Valiriano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Spectral:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<div class="top">
+<div><h1>Tradutor de Alto Valiriano</h1>
+<p class="sub">Português e Alto Valiriano, a língua criada por David J. Peterson. O tradutor monta frases com as regras do idioma (casos, números, conjugação, verbo no fim) a partir de um dicionário de palavras documentadas.</p></div>
+<div class="themes" role="group" aria-label="Tema"><button class="th" data-t="prata" aria-pressed="true">Prata</button><button class="th" data-t="terra" aria-pressed="false">Terra</button></div>
+</div>
+<div class="bar"><span id="from">Português</span><button class="swap" id="swap" aria-label="Inverter direção">⇄</button><span id="to">Alto Valiriano</span></div>
+<div class="grid">
+<div class="in"><textarea id="src" aria-label="Texto de origem" placeholder="Escreva aqui. Ex.: o homem ama a mulher"></textarea><div class="keys" id="keys" aria-label="Teclas com macron"></div></div>
+<div class="out"><div class="res ph" id="res" aria-live="polite">A tradução aparece aqui.</div><button class="cp" id="cp">Copiar</button></div>
+</div>
+<div class="chips" id="chips"></div>
+<p class="note" id="note"></p>
+
+<h2>Experimente</h2>
+<div class="ex" id="ex"></div>
+
+<h2>Seu dicionário</h2>
+<p class="note">Palavras fora do dicionário aparecem entre colchetes. Adicione as suas (nomes, criaturas, itens da mesa): o tradutor aplica casos e conjugação a elas. Para verbos, informe o infinitivo em português e em valiriano (terminado em <code>-agon</code>, <code>-egon</code> etc.). Fica salvo só neste navegador.</p>
+<div class="add"><input id="cpt" placeholder="Português (ex.: elfo)" aria-label="Palavra em português"><input id="chv" placeholder="Valiriano (ex.: elfa)" aria-label="Palavra em valiriano"><select id="cty" aria-label="Tipo"><option value="n">substantivo</option><option value="a">adjetivo</option><option value="v">verbo</option><option value="d">advérbio</option></select><button id="cadd">Adicionar</button></div>
+<div class="cw" id="cw"></div>
+
+<h2>Como o idioma funciona</h2>
+<details open><summary>Ordem das palavras e sujeito</summary><p>A ordem é sujeito, objeto, verbo. O verbo já indica a pessoa, então o pronome sujeito costuma ser omitido: <code>Avy jorrāelan</code> é “eu te amo”. Adjetivos vêm antes do substantivo; possuidor antes do possuído.</p></details>
+<details><summary>Casos, gêneros e números</summary><p>Oito casos (nominativo, acusativo, genitivo, dativo, locativo, instrumental, comitativo, vocativo), quatro gêneros (lunar, solar, terrestre, aquático) e quatro números (singular, plural, paucal, coletivo). Nomes em <code>-a</code> têm a declinação completa documentada: <code>vala</code>, <code>vale</code> (acusativo), <code>valo</code> (genitivo), <code>valot</code> (dativo), <code>valā</code> (locativo). Para os demais, só as formas documentadas são geradas.</p></details>
+<details><summary>Verbos e negação</summary><p>O verbo concorda com o sujeito: <code>jorrāelan</code> (eu amo), <code>jorrāelas</code> (ele ama), <code>jorrāelasi</code> (eles amam). Frases negativas usam o subjuntivo seguido de <code>daor</code>: <code>Zaldrīzes buzdari iksos daor</code>. Este tradutor gera o presente; passado, futuro e voz passiva não são gerados.</p></details>
+<details><summary>Legenda e limites</summary><p>Linha pontilhada: forma não documentada, mantida na forma base. Etiquetas dos blocos: <code>regra</code> (forma gerada pela gramática), <code>conc</code> (concordância do adjetivo não gerada), <code>sem entrada</code> (palavra ausente). Nenhum tradutor cobre qualquer frase: o vocabulário oficial tem pouco mais de 2.000 palavras, e o dicionário aqui ainda é parcial. Use o campo acima para ampliá-lo.</p></details>
+</main>
+<footer>
+<p>Este tradutor foi criado para uso em uma campanha de RPG de D&amp;D, onde o Alto Valiriano faz o papel do idioma dracônico. Ele usa como base o funcionamento do idioma em Game of Thrones, criado por David J. Peterson.</p>
+<p>Fontes: documentação do idioma em The Languages of David J. Peterson, Wiktionary e materiais da série.</p>
+</footer>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

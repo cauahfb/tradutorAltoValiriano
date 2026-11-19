@@ -1,0 +1,57 @@
+:root{--bg:#f6f4ee;--ink:#1f2630;--mute:#5f6773;--panel:#fcfbf7;--line:#cdd0d6;--acc:#3c5a82;--s1:#eceef1;--s2:#d9dde3;--sink:#1f2630;--warn:#8c5a2b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="terra"]{--bg:#f5f0e6;--ink:#2b241b;--mute:#6c6254;--panel:#fbf8f1;--line:#d3cab9;--acc:#8a5a36;--s1:#ece7dc;--s2:#dcd5c5;--sink:#2b241b;--warn:#3c5a82}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Spectral,Georgia,serif}
+main{max-width:1040px;margin:0 auto;padding:36px 20px 40px}
+h1{font:700 clamp(2.2rem,6vw,3.6rem)/1.05 "Cormorant Garamond",Georgia,serif;margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 22px;max-width:62ch}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.themes{display:flex;gap:6px}
+button,select,input{font:inherit;color:var(--ink)}
+button{cursor:pointer}
+.th{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:5px 14px}
+.th[aria-pressed="true"]{border-color:var(--acc);color:var(--acc);font-weight:600}
+.bar{display:flex;align-items:center;gap:12px;margin:6px 0 12px;font-weight:600}
+.swap{border:1px solid var(--line);background:var(--panel);border-radius:999px;width:44px;height:44px;font-size:1.2rem}
+.swap:hover,.th:hover{border-color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.in{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px}
+textarea{width:100%;min-height:170px;resize:vertical;border:0;background:transparent;font:400 1.15rem/1.5 Spectral,Georgia,serif}
+textarea:focus{outline:none}
+.keys{display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px}
+.keys button{min-width:40px;height:38px;border:1px solid var(--line);background:transparent;border-radius:4px;font-size:1.05rem}
+.keys button:hover{border-color:var(--acc)}
+.out{min-height:230px;border-radius:6px;padding:18px;color:var(--sink);background:repeating-linear-gradient(112deg,var(--s1) 0 14px,var(--s2) 14px 15px,var(--s1) 15px 31px);border:1px solid var(--line);display:flex;flex-direction:column}
+.res{font:600 clamp(1.5rem,4vw,2.2rem)/1.35 "Cormorant Garamond",Georgia,serif;flex:1;overflow-wrap:anywhere}
+.res.ph{font-weight:500;opacity:.6;font-size:1.2rem}
+.res .nd{border-bottom:2px dotted var(--warn)}
+.res .unk{opacity:.6;border-bottom:1px dashed currentColor}
+.cp{align-self:flex-start;margin-top:12px;border:1px solid var(--mute);background:transparent;border-radius:4px;padding:6px 14px}
+.cp:hover{border-color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:3px 10px;font-size:.95rem}
+.chip b{color:var(--acc)}
+.chip i{color:var(--mute);font-size:.85rem;margin-left:4px}
+.chip.unk,.chip.nd{border-style:dashed;border-color:var(--warn)}
+.note{color:var(--mute);font-size:.95rem;margin:6px 0 0;max-width:80ch}
+h2{font:700 1.7rem/1.2 "Cormorant Garamond",Georgia,serif;margin:40px 0 10px}
+.ex{display:flex;flex-wrap:wrap;gap:8px}
+.ex button{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:6px 12px}
+.ex button:hover{border-color:var(--acc)}
+.add{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.add input,.add select{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:8px 10px;min-width:0;flex:1 1 140px}
+.add button{border:1px solid var(--acc);background:var(--acc);color:var(--panel);border-radius:4px;padding:8px 18px}
+.cw{display:flex;flex-wrap:wrap;gap:8px}
+.cw span{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:3px 6px 3px 10px}
+.cw button{border:0;background:transparent;color:var(--mute);padding:0 6px}
+details{border-top:1px solid var(--line);padding:12px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;max-width:72ch}
+code{font-family:inherit;font-style:italic;color:var(--acc)}
+footer{border-top:1px solid var(--line);background:var(--s1);padding:26px 20px calc(26px + env(safe-area-inset-bottom,0px))}
+footer p{max-width:1000px;margin:0 auto 6px;color:var(--mute);font-size:.95rem}
