@@ -1,5 +1,8 @@
 # Tradutor de Alto Valiriano
 
+Parte do Projeto CampanhaRPG
+[![Website](https://img.shields.io/badge/Website-campanharpg.com.br-67247f?style=for-the-badge)](https://campanharpg.com.br)
+
 Tradutor Português ⇄ Alto Valiriano feito para uma campanha de RPG de D&D (o Alto Valiriano faz o papel do idioma dracônico), com base no funcionamento do idioma em Game of Thrones, criado por David J. Peterson.
 
 ## Estrutura
